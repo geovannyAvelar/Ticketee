@@ -1,0 +1,18 @@
+<%= form_for @project do |f| %>
+
+  <p class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+    <%= error_tag(@project, :name) %>
+  </p>
+
+  <p class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: 'form-control' %>
+  </p>
+
+  <%= error_tag(@project, :description) %>
+
+  <%= f.submit class: 'btn btn-success' %>
+
+<% end %>
