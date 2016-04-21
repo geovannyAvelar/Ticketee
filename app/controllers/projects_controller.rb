@@ -45,6 +45,9 @@ class ProjectsController < ApplicationController
 
     def set_project
       @project = Project.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      flash[:alert] = 'Project cannot be found'
+      redirect_to root_path
     end
 
     def project_params
