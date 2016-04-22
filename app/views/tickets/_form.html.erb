@@ -1,0 +1,17 @@
+<%= form_for [@project, @ticket] do |f| %>
+
+  <p class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+    <%= error_tag(@ticket, :title) %>
+  </p>
+
+  <p class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: 'form-control' %>
+    <%= error_tag(@ticket, :description) %>
+  </p>
+
+  <%= f.submit %>
+
+<% end %>

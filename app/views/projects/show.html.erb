@@ -4,3 +4,25 @@
 <%= link_to 'Edit', edit_project_path(@project) %>
 <%= link_to 'Delete', project_path(@project),
             method: :delete, data: { confirm: 'Are you sure?'} %>
+
+<%= link_to 'Create ticket', new_project_ticket_path(@project) %>
+
+<table class="table">
+
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @project.tickets.each do |ticket| %>
+      <tr>
+        <td><%= link_to ticket.title, project_ticket_path(@project, ticket) %></td>
+        <td><%= ticket.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
