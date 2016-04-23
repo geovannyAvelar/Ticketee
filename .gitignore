@@ -1,6 +1,7 @@
 *.gem
 *.rbc
 *.sqlite3
+*.log
 /db/schema.rb
 /.config
 /coverage/
