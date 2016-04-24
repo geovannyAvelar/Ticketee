@@ -9413,3 +9413,75 @@ Processing by TicketsController#show as HTML
   Rendered tickets/show.html.erb within layouts/application (0.9ms)
 Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 0.5ms)
   [1m[35m (1.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'test1@test.com' LIMIT 1
+  [1m[36mSQL (27.2ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "test1@test.com"], ["encrypted_password", "$2a$04$xKdJyMhoBKgl4ZF2tVp7/eUPY0K/pER5usb1rjpqaLemzWFf/E0wa"], ["created_at", "2016-04-24 22:11:15.940712"], ["updated_at", "2016-04-24 22:11:15.940712"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-04-24 19:11:16 -0300
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 1257ms (Views: 1196.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'test1@test.com' LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "test1@test.com"], ["encrypted_password", "$2a$04$/Vx3ugxSI6e3cG0I4HCVv.QjXjOJFQ4.z0Csmh4sEM5vpdj5oYRgi"], ["created_at", "2016-04-24 22:12:25.598659"], ["updated_at", "2016-04-24 22:12:25.598659"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-04-24 19:12:25 -0300
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 871ms (Views: 838.6ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-04-24 19:12:26 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered vendor/bundle/gems/devise-4.0.0/app/views/devise/shared/_links.html.erb (42.2ms)
+  Rendered vendor/bundle/gems/devise-4.0.0/app/views/devise/sessions/new.html.erb within layouts/application (306.1ms)
+Completed 200 OK in 405ms (Views: 374.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'test1@test.com' LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "test1@test.com"], ["encrypted_password", "$2a$04$oMLSGskJjQPSjJP1zBGqRunxjqPRyopIbhaetL8hLzfyxIhnKxvJy"], ["created_at", "2016-04-24 22:12:42.955377"], ["updated_at", "2016-04-24 22:12:42.955377"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-04-24 19:12:42 -0300
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 868ms (Views: 836.1ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-04-24 19:12:43 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered vendor/bundle/gems/devise-4.0.0/app/views/devise/shared/_links.html.erb (41.0ms)
+  Rendered vendor/bundle/gems/devise-4.0.0/app/views/devise/sessions/new.html.erb within layouts/application (132.5ms)
+Completed 200 OK in 173ms (Views: 152.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'test1@test.com' LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "test1@test.com"], ["encrypted_password", "$2a$04$ibeudsabV9pVW8UBCUIVP..6Bg6pIFzvIiIexgiURH4lOE75xfYoC"], ["created_at", "2016-04-24 22:13:10.551142"], ["updated_at", "2016-04-24 22:13:10.551142"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-04-24 19:13:10 -0300
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 866ms (Views: 833.9ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-04-24 19:13:11 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered vendor/bundle/gems/devise-4.0.0/app/views/devise/shared/_links.html.erb (41.4ms)
+  Rendered vendor/bundle/gems/devise-4.0.0/app/views/devise/sessions/new.html.erb within layouts/application (131.9ms)
+Completed 200 OK in 172ms (Views: 151.5ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-04-24 19:13:11 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"test1@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "test1@test.com"]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-04-24 22:13:11.796399"], ["current_sign_in_at", "2016-04-24 22:13:11.796399"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-04-24 22:13:11.799362"], ["id", 1]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 114ms (ActiveRecord: 2.0ms)
+Started GET "/" for 127.0.0.1 at 2016-04-24 19:13:11 -0300
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
