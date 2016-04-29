@@ -6,4 +6,10 @@ module ApplicationHelper
     end
   end
 
+  def admins_only(&block)
+    if !current_user.nil? && current_user.admin?
+      block.call
+    end
+  end
+
 end

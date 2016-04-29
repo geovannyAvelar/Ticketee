@@ -3,3 +3,4 @@
 <%= @ticket.description %>
 
 <%= link_to 'Edit', edit_project_ticket_path(@project, @ticket) %>
+<%= link_to 'Delete', project_ticket_path(@project, @ticket, method: :delete) %>

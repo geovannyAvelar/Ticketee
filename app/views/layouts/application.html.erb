@@ -15,6 +15,9 @@
     <% end %>
 
     <% if user_signed_in? %>
+      <%= admins_only do %>
+        <a href="">Admin's area</a>
+      <% end %>
       <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
     <% end %>
 

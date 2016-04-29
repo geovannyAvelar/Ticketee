@@ -1,9 +1,11 @@
 <p>Name: <%= @project.name %></p>
 <p>Description: <%= @project.description %></p>
 
-<%= link_to 'Edit', edit_project_path(@project) %>
-<%= link_to 'Delete', project_path(@project),
-            method: :delete, data: { confirm: 'Are you sure?'} %>
+<%= admins_only do %>
+  <%= link_to 'Edit', edit_project_path(@project) %>
+  <%= link_to 'Delete', project_path(@project),
+              method: :delete, data: { confirm: 'Are you sure?'} %>
+<% end %>
 
 <%= link_to 'Create ticket', new_project_ticket_path(@project) %>
 
