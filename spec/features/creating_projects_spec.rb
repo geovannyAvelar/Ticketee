@@ -3,7 +3,9 @@ require 'rails_helper'
 RSpec.feature "Users can create projects", type: :feature do
 
   before do
-    visit '/'
+    login_as(FactoryGirl.create(:user, :admin))
+
+    visit admin_root_path
     click_link 'Create project'
   end
 

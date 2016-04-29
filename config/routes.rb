@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  resources :projects do
-      resources :tickets
+
+  resources :projects, only: [:index, :show] do
+    resources :tickets
+  end
+
+  namespace :admin do
+    root 'application#index'
+    resources :projects, except: [:index, :show]
   end
 
   root 'projects#index'

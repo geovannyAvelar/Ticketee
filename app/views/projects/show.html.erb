@@ -2,8 +2,8 @@
 <p>Description: <%= @project.description %></p>
 
 <%= admins_only do %>
-  <%= link_to 'Edit', edit_project_path(@project) %>
-  <%= link_to 'Delete', project_path(@project),
+  <%= link_to 'Edit', edit_admin_project_path(@project) %>
+  <%= link_to 'Delete', admin_project_path(@project),
               method: :delete, data: { confirm: 'Are you sure?'} %>
 <% end %>
 

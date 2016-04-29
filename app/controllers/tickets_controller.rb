@@ -1,5 +1,4 @@
 class TicketsController < ApplicationController
-
   before_action :set_ticket, only: [:edit, :update, :show, :destroy]
   before_action :set_project
 
@@ -54,5 +53,4 @@ class TicketsController < ApplicationController
     def ticket_params
       params.require(:ticket).permit(:title, :description)
     end
-
 end
